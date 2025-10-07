@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #0a192f;
+    --accent-color: #64ffda;
+    --ice-blue: #a8d8ff;
+    --text-color: #ccd6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+header {
+    background: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(100, 255, 218, 0.1);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    background: rgba(100, 255, 218, 0.15);
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9));
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--ice-blue), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--ice-blue);
+    max-width: 600px;
+}
+
+.team-section {
+    padding: 6rem 2rem;
+    background: rgba(10, 25, 47, 0.7);
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background: rgba(10, 25, 47, 0.95);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(100, 255, 218, 0.2),
+                     0 0 20px rgba(100, 255, 218, 0.2);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(100, 255, 218, 0.4),
+                     0 0 30px rgba(100, 255, 218, 0.4);
+    }
+}
+
+.ice-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="%23a8d8ff22"/></svg>');
+    background-size: 30px 30px;
+    pointer-events: none;
+}
