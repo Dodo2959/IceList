@@ -1,8 +1,8 @@
 :root {
     --primary-color: #0a192f;
-    --accent-color: #64ffda;
+    --accent-color: #cbfff3;
     --ice-blue: #a8d8ff;
-    --text-color: #ccd6f6;
+    --text-color: #ffffff;
 }
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Funnel Sans', sans-serif;
     background: var(--primary-color);
     color: var(--text-color);
 }
