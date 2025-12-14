@@ -1,0 +1,60 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  @apply select-none;
+}
+
+input, textarea, button {
+  @apply select-text;
+}
+
+body {
+  @apply bg-glacial-darker text-white overflow-x-hidden;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-glacial-card backdrop-blur-md border border-glacial-border rounded-xl;
+}
+
+.glass-sm {
+  @apply bg-glacial-card/70 backdrop-blur-sm border border-glacial-border rounded-lg;
+}
+
+/* Glow Effects */
+.glow-blue {
+  @apply shadow-glow-lg;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-glow;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-ice-300 via-ice-400 to-ice-500 bg-clip-text text-transparent;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.5);
+}
